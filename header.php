@@ -11,42 +11,19 @@
 
 	<div class="container">
 
-		<!-- site-header -->
-		<header class="site-header">
-
-			<!-- hd-search -->
-			<div class="hd-search">
-				<?php get_search_form(); ?>
-			</div><!-- /hd-search -->
-
-			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-			<h5><?php bloginfo('description'); ?> <?php if (is_page('portfolio')) { ?>
-				- Thank you for viewing our work
-			<?php }?></h5>
-
-
-
-			<nav class="site-nav">
-
-				<?php
-
-				$args = array(
-					'theme_location' => 'primary'
-				);
-
-				?>
-
-				<?php wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            ); ?>
-			</nav>
-
-		</header><!-- /site-header -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <?php bootstrap_nav(); ?>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
