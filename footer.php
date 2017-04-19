@@ -1,38 +1,47 @@
-<footer class="site-footer">
-
-  <?php if (get_theme_mod('lwp-footer-callout-display') == "Yes") { ?>
-  <div class="footer-callout clearfix">
-    <div class="footer-callout-image">
-      <a href="<?php echo get_permalink(get_theme_mod('lwp-footer-callout-link')) ?>"><img src="<?php echo wp_get_attachment_url(get_theme_mod('lwp-footer-callout-image')) ?>"></a>
-    </div>
-
-    <div class="footer-callout-text">
-      <h2><a href="<?php echo get_permalink(get_theme_mod('lwp-footer-callout-link')) ?>"><?php echo get_theme_mod('lwp-footer-callout-headline') ?></a></h2>
-      <?php echo wpautop(get_theme_mod('lwp-footer-callout-text')) ?>
-      <p><a href="<?php echo get_permalink(get_theme_mod('lwp-footer-callout-link')) ?>"><strong>Learn more &raquo;</strong></a></p>
-    </div>
-  </div>
-  <?php } ?>
 
 
+<footer>
+    <section class="footer-content">
+        <div class="container">
+         <div class="row">
+             <div class="col-md-4">
+                 <img src="img/thinktrees_logo.png" />
+             </div>
+             <div class="col-md-4">
+                 <h5>SUPPORT US</h5>
+                 <ul>
+                     <li><a href="" class="">Donate Now</a></li>
+                     <li><a href="" class="">Become a Member</a></li>
+                     <li><a href="" class="">Online Store</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-4">
+                 <h5>CONTACT US</h5>
+                 <ul>
+                     <li>900 Corydon Avenue Winnipeg, Manitoba R3M 0Y4</li>
+                     <li>Telephone: (204) 453-3182</li>
+                     <li>Fax: (204) 477-5765</li>
+                 </ul>
+             </div>
+         </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-8"><p>Copyright © 2017 Manitoba Forestry Association. All rights reserved.</p></div>
+                    <div class="col-md-4 terms-privacy">
+                        <ul class="pull-right">
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-  <nav class="site-nav">
-    <?php
-
-    $args = array(
-      'theme_location' => 'footer'
-    );
-
-    ?>
-
-    <?php wp_nav_menu(  $args ); ?>
-  </nav>
-
-  <p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
-
+            </div>
+        </div>
+    </section>
 </footer>
+    
+    
 
-</div><!-- container -->
 
 <?php wp_footer(); ?>
 </body>
