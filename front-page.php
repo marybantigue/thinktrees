@@ -1,12 +1,12 @@
 <?php
 get_header(); ?>
-
-<div class="container banner">
+<div class="banner" style="background-image: url( <?php header_image(); ?>)">
+  <div class="container">
     <div class="banner-content">
         <h1>Do you want your students to think about environmental issues?</h1>
         <a href="" class="btn-banner">FIND OUT HOW</a>
     </div>
-    
+  </div>
 </div>
 <section class="home-content">
     <div class="row">

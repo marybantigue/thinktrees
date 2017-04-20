@@ -9,11 +9,13 @@
              </div>
              <div class="col-md-4">
                  <h5>SUPPORT US</h5>
-                 <ul>
-                     <li><a href="" class="">Donate Now</a></li>
-                     <li><a href="" class="">Become a Member</a></li>
-                     <li><a href="" class="">Online Store</a></li>
-                 </ul>
+                 <?php
+                     wp_nav_menu( array(
+                         'theme_location'    => 'footer-menu',
+                        //  'menu_class' => 'nav nav-pills navbar-right'
+                         )
+                     );
+                 ?>
              </div>
              <div class="col-md-4">
                  <h5>CONTACT US</h5>
@@ -39,8 +41,8 @@
         </div>
     </section>
 </footer>
-    
-    
+
+
 
 
 <?php wp_footer(); ?>

@@ -13,7 +13,7 @@
             <nav id="main-menu" class="navbar nav-top navbar-fixed-top clearfix nav-back ">
                 <div class="container">
                     <div class="think-trees-info">
-                        <?php 
+                        <?php
                             wp_nav_menu( array(
                                 'theme_location'    => 'top-left-menu',
                                 'menu_class' => 'nav nav-pills navbar-right'
@@ -34,19 +34,15 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                         <a class="navbar-brand" href="<?= get_home_url()?>"><?php bloginfo('name'); ?></a>
+                         <a class="navbar-brand" href="<?= get_home_url()?>"><?php thinktrees_the_custom_logo() ?></a>
                     </div>
-                    <div id="navbar" class="navbar-collapse collapse">                            
-                        <?php 
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <?php
                             bootstrap_nav();
-                          ?>                        
+                          ?>
                     </div>
                     <!--/.nav-collapse -->
                 </div>
                 <!--/.container-fluid -->
-            </nav> 
+            </nav>
         </div>
-        
-        
-   
-       

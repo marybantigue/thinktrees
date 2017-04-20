@@ -38,6 +38,8 @@ function bootstrap_nav()
 
 
 
+
+
 // Theme setup
 function thinktrees_setup() {
 
@@ -49,6 +51,32 @@ function thinktrees_setup() {
 
 	// Add post type support
 	add_theme_support('post-formats', array('aside', 'gallery', 'link'));
+
+	//add custom header support
+	$args = array(
+		'default-image'      => get_parent_theme_file_uri( '/images/homeback.jpg' ),
+		'width'              => 2000,
+		'height'             => 1200,
+		'flex-height'        => true
+	);
+	add_theme_support( 'custom-header', $args );
+
+	//add custom logo support
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-width' => true,
+	) );
+
+
+
 }
 
 add_action('after_setup_theme', 'thinktrees_setup');
+
+
+function thinktrees_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+}
