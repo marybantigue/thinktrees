@@ -33,19 +33,19 @@ get_header(); ?>
         <div class="row">
             <div class="col-md-3">
                 <h6>Seedlings and Tree Sales</h6>
-                <img src="img/seedlings_icon.png" />
+                <img src="<?php echo get_parent_theme_file_uri('/images/seedlings_icon.png') ?>" />
             </div>
             <div class="col-md-3">
                 <h6>Wedding Favours </h6>
-                <img src="img/weddingfavors_icon.png" />
+                <img src="<?php echo get_parent_theme_file_uri('/images/weddingfavors_icon.png') ?>" />
             </div>
             <div class="col-md-3">
                 <h6>Special Event Seedling</h6>
-                <img src="img/specialevents_icon.png" />
+                <img src="<?php echo get_parent_theme_file_uri('/images/specialevents_icon.png') ?>" />
             </div>
             <div class="col-md-3">
                 <h6>Heritage Trees</h6>
-                <img src="img/heritagetree_icon.png" />
+                <img src="<?php echo get_parent_theme_file_uri('/images/heritagetree_icon.png') ?>" />
             </div>
         </div>
 

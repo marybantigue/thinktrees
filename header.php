@@ -9,9 +9,10 @@
 
 <body <?php body_class(); ?>>
 
-        <div id="top-nav" <?php if(is_user_logged_in()) echo 'class="top-margin"'; ?>>
+        <div id="top-nav" class="container <?php if(is_user_logged_in()) echo ' top-margin'; ?>" >
+
             <nav id="main-menu" class="navbar nav-top navbar-fixed-top clearfix nav-back ">
-                <div class="container">
+
                     <div class="think-trees-info">
                         <?php
                             wp_nav_menu( array(
@@ -42,7 +43,6 @@
                           ?>
                     </div>
                     <!--/.nav-collapse -->
-                </div>
-                <!--/.container-fluid -->
+
             </nav>
         </div>

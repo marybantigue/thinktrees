@@ -23,6 +23,11 @@ body {
 }
 p { font-size: 13px;}
 
+/*Banner New*/
+.banner .banner-content {
+  padding:200px 15px;
+}
+
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: transparent;
     border-color: transparent;
@@ -139,14 +144,14 @@ a:hover {
     margin: 10px 0 20px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-    .think-trees-info ul{
-        list-style: none;
-        display: block;
-        -webkit-padding-start: 0px;
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-bottom: 20px;
-    }
+.think-trees-info ul{
+    list-style: none;
+    display: block;
+    -webkit-padding-start: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
 .think-trees-info ul li {
    display: inline;
    padding: 0px 15px;
@@ -389,7 +394,7 @@ footer .footer-content {
 
     color:rgb(153,153,153);
     text-align: left;
-    background: url(../img/footerback.jpg) 50% 0 fixed;
+    background: url(images/footerback.jpg) 50% 0 fixed;
     height: auto;
     margin: 0 auto;
     width: 100%;

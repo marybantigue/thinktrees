@@ -5,15 +5,14 @@
         <div class="container">
          <div class="row">
              <div class="col-md-4">
-                 <img src="img/thinktrees_logo.png" />
+                 <?php thinktrees_the_custom_logo() ?>
              </div>
              <div class="col-md-4">
                  <h5>SUPPORT US</h5>
                  <?php
                      wp_nav_menu( array(
-                         'theme_location'    => 'footer-menu',
-                        //  'menu_class' => 'nav nav-pills navbar-right'
-                         )
+                         'theme_location'    => 'footer-menu'
+                       )
                      );
                  ?>
              </div>
