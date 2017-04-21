@@ -8,28 +8,21 @@
                  <?php thinktrees_the_custom_logo() ?>
              </div>
              <div class="col-md-4">
-                 <h5>SUPPORT US</h5>
-                 <?php
-                     wp_nav_menu( array(
-                         'theme_location'    => 'footer-menu'
-                       )
-                     );
-                 ?>
+                 <?php  if (is_active_sidebar('footer1')) {
+                          dynamic_sidebar('footer1');
+                        } ?>
              </div>
              <div class="col-md-4">
-                 <h5>CONTACT US</h5>
-                 <ul>
-                     <li>900 Corydon Avenue Winnipeg, Manitoba R3M 0Y4</li>
-                     <li>Telephone: (204) 453-3182</li>
-                     <li>Fax: (204) 477-5765</li>
-                 </ul>
+                 <?php  if (is_active_sidebar('footer2')) {
+                          dynamic_sidebar('footer2');
+                  } ?>
              </div>
          </div>
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-8"><p>Copyright © 2017 Manitoba Forestry Association. All rights reserved.</p></div>
-                    <div class="col-md-4 terms-privacy">
-                        <ul class="pull-right">
+                    <div class="col-md-4 terms-conditions">
+                        <ul>
                             <li><a href="">Terms & Conditions</a></li>
                             <li><a href="">Privacy Policy</a></li>
                         </ul>

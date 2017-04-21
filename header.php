@@ -9,40 +9,47 @@
 
 <body <?php body_class(); ?>>
 
-        <div id="top-nav" class="container <?php if(is_user_logged_in()) echo ' top-margin'; ?>" >
+	<div id="top-nav" class="<?php if(is_user_logged_in()) echo ' top-margin'; ?>" >
 
-            <nav id="main-menu" class="navbar nav-top navbar-fixed-top clearfix nav-back ">
+			<nav id="main-menu" class="navbar navbar-fixed-top">
+					<div class="container">
+							<div class="think-trees-info clearfix">
+									<?php
+											wp_nav_menu( array(
+													'theme_location'    => 'top-left-menu',
+													'menu_class' => 'nav nav-pills navbar-left'
+													)
+											);
+									?>
+									<ul class="nav navbar-nav navbar-right">
+											<li><a href="#">Online Store</a></li>
+											<li><a href="#">0 Itesm(s) - $0.00</a></li>
+											<li><a href="<?php echo wp_login_url(); ?>" title="Login" class="login">Login</a></li>
+									</ul>
 
-                    <div class="think-trees-info">
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location'    => 'top-left-menu',
-                                'menu_class' => 'nav nav-pills navbar-right'
-                                )
-                            );
-                        ?>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Online Store</a></li>
-                            <li><a href="#">0 Itesm(s) - $0.00</a></li>
-                            <li><a href="<?php echo wp_login_url(); ?>" title="Login">Login</a></li>
-                        </ul>
+							</div>
+							<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-area">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+									</button>
 
-                    </div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                         <a class="navbar-brand" href="<?= get_home_url()?>"><?php thinktrees_the_custom_logo() ?></a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <?php
-                            bootstrap_nav();
-                          ?>
-                    </div>
-                    <!--/.nav-collapse -->
+									<?php
+									 if( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
+										 thinktrees_the_custom_logo();
+									 }else{ ?>
+										 <a class="navbar-brand" href="<?= get_home_url()?>"><?php  bloginfo('name'); ?></a>
+									 <?php } ?>
 
-            </nav>
-        </div>
+							</div>
+							<!-- <div id="navbararea" class="navbar-collapse collapse"> -->
+									<?php
+											bootstrap_nav();
+										?>
+							<!-- </div> -->
+							<!--/.nav-collapse -->
+					</div>
+			</nav>
+	</div>

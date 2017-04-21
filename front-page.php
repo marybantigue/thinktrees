@@ -3,49 +3,49 @@ get_header(); ?>
 <div class="banner" style="background-image: url( <?php header_image(); ?>)">
   <div class="container">
     <div class="banner-content">
-        <h1>Do you want your students to think about environmental issues?</h1>
-        <a href="" class="btn-banner">FIND OUT HOW</a>
+        <?php  if (is_active_sidebar('banner')) {
+                 dynamic_sidebar('banner');
+         } ?>
     </div>
   </div>
 </div>
-<section class="home-content">
-    <div class="row">
-        <div class="col-md-6 news-wrap">
-            <h2>What’s Happening?</h2>
+<section class="home-content clearfix">
 
-            <h5>On Line Courses available Spring 2017</h5>
-            <p>The Ecological Restoration Training Cooperative welcomes everyone interested in restoring the quality, diversity, and productivity of our ecosystems.</p>
-            <h5>2017 Seedlings Now Available!</h5>
-            <p>We are now accepting your 2017 Seedling Orders. New this year - Acute Willows and Golden Willows. Don’t wait until last minute to order. Call, Fax, Phone or place your order on-line. </p>
+        <div class="left-side news-wrap">
 
-            <hr />
-            <h2>Get Involved</h2>
+            <?php  if (is_active_sidebar('greenarea')) {
+                     dynamic_sidebar('greenarea');
+             } ?>
+        </div>
+        <div class="right-side">
 
         </div>
-        <div class="col-md-6">
-
-        </div>
-    </div>
 </section>
 <section class="thinking-about-trees text-center">
     <div class="container">
-        <h2>Are you thinking about trees?</h2>
+        <?php  if (is_active_sidebar('middlewide')) {
+                 dynamic_sidebar('middlewide');
+         } ?>
         <div class="row">
             <div class="col-md-3">
-                <h6>Seedlings and Tree Sales</h6>
-                <img src="<?php echo get_parent_theme_file_uri('/images/seedlings_icon.png') ?>" />
+                <?php  if (is_active_sidebar('middlecol1')) {
+                         dynamic_sidebar('middlecol1');
+                 } ?>
             </div>
             <div class="col-md-3">
-                <h6>Wedding Favours </h6>
-                <img src="<?php echo get_parent_theme_file_uri('/images/weddingfavors_icon.png') ?>" />
+                <?php  if (is_active_sidebar('middlecol2')) {
+                       dynamic_sidebar('middlecol2');
+                } ?>
             </div>
             <div class="col-md-3">
-                <h6>Special Event Seedling</h6>
-                <img src="<?php echo get_parent_theme_file_uri('/images/specialevents_icon.png') ?>" />
+              <?php  if (is_active_sidebar('middlecol3')) {
+                       dynamic_sidebar('middlecol3');
+               } ?>
             </div>
             <div class="col-md-3">
-                <h6>Heritage Trees</h6>
-                <img src="<?php echo get_parent_theme_file_uri('/images/heritagetree_icon.png') ?>" />
+              <?php  if (is_active_sidebar('middlecol4')) {
+                       dynamic_sidebar('middlecol4');
+               } ?>
             </div>
         </div>
 
@@ -56,11 +56,14 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h2>Make a Donation</h2>
-                <p>Donating to Manitoba Forestry Association takes minutes, and it’s thanks to your support that we plant trees, and enhance the overall capacity and success of Manitoba’s tree planting efforts.</p>
+              <?php  if (is_active_sidebar('orange1')) {
+                       dynamic_sidebar('orange1');
+               } ?>
             </div>
             <div class="col-md-3">
-                <a href="#" class="btn-donate">DONATE NOW!</a>
+              <?php  if (is_active_sidebar('orange2')) {
+                       dynamic_sidebar('orange2');
+               } ?>
             </div>
         </div>
     </div>
